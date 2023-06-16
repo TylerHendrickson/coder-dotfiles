@@ -1,0 +1,24 @@
+# =====================
+# Environment variables
+# ===================== 
+
+# ===
+# AWS
+# ===
+
+export AWS_SDK_LOAD_CONFIG=true
+export AWS_PAGER=""
+
+# ====
+# Rust
+# ====
+
+export PATH=$PATH:$HOME/.cargo/bin
+
+# ============================
+# Cluster management with Flux
+# ============================
+
+export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
+
+

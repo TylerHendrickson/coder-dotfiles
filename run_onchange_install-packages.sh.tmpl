@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+sudo apt install ripgrep fdfind
+ln -sf $(which fdfind) "$HOME/.local/bin/fd"
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+brew install ripgrep fd
+{{ end -}}

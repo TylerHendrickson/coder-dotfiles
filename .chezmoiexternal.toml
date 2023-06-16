@@ -1,0 +1,7 @@
+[".oh-my-zsh/custom/plugins/zsh-aws-vault"]
+    type = "archive"
+    url = "https://github.com/blimmer/zsh-aws-vault/archive/main.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+

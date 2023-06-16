@@ -1,0 +1,15 @@
+[user]
+	name = TylerHendrickson
+	email = hendrickson.tsh@gmail.com
+[alias]
+	unstage = reset HEAD --
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+	pr = "!f() { if [ $# -lt 1 ]; then echo \"Usage: git pr <id> [<remote>]  # assuming <remote>[=origin] is on GitHub\"; else git checkout -q \"$(git rev-parse --verify HEAD)\" && git fetch -fv \"${2:-origin}\" pull/\"$1\"/head:pr/\"$1\" && git checkout pr/\"$1\"; fi; }; f"
+[core]
+	excludesFile = ~/.gitignore_global
+[hub]
+    protocol = ssh
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[init]
+	defaultBranch = main
