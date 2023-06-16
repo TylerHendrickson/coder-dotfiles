@@ -1,2 +1,2 @@
 # coder-dotfiles
-A collection of Dotfiles, primarily focused on configuring coder workspaces
+A collection of Dotfiles, managed by chezmoi
